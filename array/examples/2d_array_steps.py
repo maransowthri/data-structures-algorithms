@@ -19,3 +19,12 @@ print(new_arr)
 
 # 4. Accessing elements
 print(arr2D[0][0])
+
+# 5. Deletion
+# Deleting first row
+new_arr = np.delete(arr2D, 0, axis=0)
+print(new_arr)
+
+# Deleting first column
+new_arr = np.delete(arr2D, 0, axis=1)
+print(new_arr)
