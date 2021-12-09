@@ -16,7 +16,6 @@ for key, value in my_dict.items():
 print('name' in my_dict)
 
 # Delete particular item
-print('Delete or Remove an element')
 my_dict.pop('name')
 my_dict.pop('name1', 'N/A')
 # OR
@@ -24,21 +23,17 @@ my_dict.pop('name1', 'N/A')
 print(my_dict)
 
 # Delete random pair
-print('Delete random pair')
 print(my_dict.popitem())
 print(my_dict)
 
 # Clear all elements of a dictionary
-print('Clear all elements of a dictionary')
 # my_dict.clear()
 print(my_dict)
 
 # Delete complete dict
-print('Delete complete dict')
 # del my_dict
 
 # Create new dict with the provided keys and value
-print('Create new dict with the provided keys and value')
 new_dict = dict.fromkeys(['is_hiring', 'is_manager', 'is_lead'], False)
 print(new_dict)
 
@@ -50,12 +45,10 @@ print(new_dict.get('location', 'sivaganga'))
 print(len(new_dict))
 
 # Adding a new pairs to dict only if that doesn't exist
-print('Adding a new pairs to dict only if that doesn"t exist')
 new_dict.setdefault('location1', 'New Location')
 print(new_dict)
 
 # Update
-print('Update')
 new_dict.update({'location': 'Sivaganga'})
 print(new_dict)
 
