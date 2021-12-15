@@ -63,14 +63,19 @@ class LinkedList():
             node.next = new_node
 
     def index(self, val):
+        if not self.head:
+            raise Exception('Linked list does not exist')
+        
         temp = self.head
         cur_index = 0
+
         while temp:
             if temp.val == val:
                 return cur_index
             else:
                 cur_index += 1
                 temp = temp.next
+        
         raise Exception('Value doesn"t exist')
 
     def delete(self, index):
