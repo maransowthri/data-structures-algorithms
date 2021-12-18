@@ -2,10 +2,10 @@ from random import randint
 
 
 class Node:
-    def __init__(self, val) -> None:
+    def __init__(self, val, next=None, prev=None) -> None:
         self.val = val
-        self.prev = None
-        self.next = None
+        self.prev = prev
+        self.next = next
     
     def __str__(self) -> str:
         return str(self.val)
