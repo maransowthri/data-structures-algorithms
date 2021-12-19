@@ -6,7 +6,7 @@ class SinglyList(LinkedList):
         super().__init__()
     
     def get(self, index):
-        head_size = self.__len__()
+        head_size = len(self)
 
         if not -head_size <= index < head_size:
             raise Exception('Index out of range')
@@ -24,5 +24,5 @@ class SinglyList(LinkedList):
 linked_list = SinglyList()
 linked_list.generate(10, 1, 99)
 print(linked_list)
-print(linked_list.get(-11))
+print(linked_list.get(-1))
     
