@@ -15,6 +15,21 @@ def dfs(root, res):
         res.append(root.val)
         dfs(root.right, res)
 
+def in_order_iter(root):
+    res = []
+    stack = []
+
+    while stack or root:
+        if root:
+            stack.append(root)
+            root = root.left
+        else:
+            node = stack.pop()
+            res.append(node.val)
+            root = node.right
+    
+    return res
+
 
 drinks = Node('Drinks')
 hot = Node('Hot')
@@ -36,5 +51,5 @@ for val in in_order(drinks):
 
 print('')
 print('Iterative')
-# for val in pre_order_iter(drinks):
-#     print(val)
+for val in in_order_iter(drinks):
+    print(val)
